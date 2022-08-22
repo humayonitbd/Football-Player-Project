@@ -45,10 +45,10 @@
                                 <div class="card" style="width: 18rem; background: #000000;">
                                     <img src="images/Lionel Messi.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                      <h5 class="card-title text-center text-white">Lionel Messi</h5>
+                                      <h5 class="card-title text-center text-white" id="name-id">Lionel Messi</h5>
                                       <p class="card-text text-center text-white">36 Goals . 120 Assist</p>
                                       <div class="text-center">
-                                        <a href="#" style="background: #015196;" class="btn w-100 text-white">SELECT</a>
+                                        <a href="#" id="select-btn" style="background: #015196;" class="btn w-100 text-white selectedbtn" onclick="selectBtn(this)">SELECT</a>
                                       </div>
                                       
                                     </div>
@@ -58,10 +58,10 @@
                                 <div class="card" style="width: 18rem; background: #000000;">
                                     <img src="images/Andres Iniesta.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                      <h5 class="card-title text-center text-white">Andres Iniesta</h5>
+                                      <h5 class="card-title text-center text-white" id="name-id">Andres Iniesta</h5>
                                       <p class="card-text text-center text-white">36 Goals . 120 Assist</p>
                                       <div class="text-center">
-                                        <a href="#" style="background: #015196;" class="btn w-100 text-white">SELECT</a>
+                                        <a href="#" id="select-btn" style="background: #015196;" class="btn w-100 text-white" onclick="selectBtn(this)">SELECT</a>
                                       </div>
                                       
                                     </div>
@@ -71,10 +71,10 @@
                                 <div class="card" style="width: 18rem; background: #000000;">
                                     <img src="images/Cristiano ronaldo.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                      <h5 class="card-title text-center text-white">Cristiano ronaldo</h5>
+                                      <h5 class="card-title text-center text-white" id="name-id">Cristiano ronaldo</h5>
                                       <p class="card-text text-center text-white">36 Goals . 120 Assist</p>
                                       <div class="text-center">
-                                        <a href="#" style="background: #015196;" class="btn w-100 text-white">SELECT</a>
+                                        <a href="#" id="select-btn" style="background: #015196;" class="btn w-100 text-white" onclick="selectBtn(this)">SELECT</a>
                                       </div>
                                       
                                     </div>
@@ -87,7 +87,7 @@
                                       <h5 class="card-title text-center text-white">Andrea Pirlo</h5>
                                       <p class="card-text text-center text-white">36 Goals . 120 Assist</p>
                                       <div class="text-center">
-                                        <a href="#" style="background: #015196;" class="btn w-100 text-white">SELECT</a>
+                                        <a href="#" style="background: #015196;" class="btn w-100 text-white" onclick="selectBtn(this)">SELECT</a>
                                       </div>
                                       
                                     </div>
@@ -100,7 +100,7 @@
                                       <h5 class="card-title text-center text-white">Sergio Aguero</h5>
                                       <p class="card-text text-center text-white">36 Goals . 120 Assist</p>
                                       <div class="text-center">
-                                        <a href="#" style="background: #015196;" class="btn w-100 text-white">SELECT</a>
+                                        <a href="#" style="background: #015196;" class="btn w-100 text-white" onclick="selectBtn(this)">SELECT</a>
                                       </div>
                                       
                                     </div>
@@ -113,7 +113,7 @@
                                       <h5 class="card-title text-center text-white">Xavi</h5>
                                       <p class="card-text text-center text-white">36 Goals . 120 Assist</p>
                                       <div class="text-center">
-                                        <a href="#" style="background: #015196;" class="btn w-100 text-white">SELECT</a>
+                                        <a href="#" style="background: #015196;" class="btn w-100 text-white" onclick="selectBtn(this)">SELECT</a>
                                       </div>
                                       
                                     </div>
@@ -126,7 +126,7 @@
                                       <h5 class="card-title text-center text-white">Yaya Toure</h5>
                                       <p class="card-text text-center text-white">36 Goals . 120 Assist</p>
                                       <div class="text-center">
-                                        <a href="#" style="background: #015196;" class="btn w-100 text-white">SELECT</a>
+                                        <a href="#" style="background: #015196;" class="btn w-100 text-white" onclick="selectBtn(this)">SELECT</a>
                                       </div>
                                       
                                     </div>
@@ -139,10 +139,10 @@
                         <div>
                             <h4 class="text-white mb-5 text-center">Selected-V</h4>
                             <div class="text-white">
-                                <ol>
-                                    <li>link 1</li>
+                                <ol id="olList">
+                                    <!-- <li>link 1</li>
                                     <li>link 2</li>
-                                    <li>link 3</li>
+                                    <li>link 3</li> -->
                                 </ol>
                             </div>
                         </div>
@@ -150,15 +150,15 @@
                             <h4 class="text-white mb-4 text-center">Budget</h4>
                             <div class="">
                                 <label for="" class=" me-2">Per Player</label>
-                                <input type="text" class="bg-transparent border py-1 text-white"><br>
-                                <button class="btn btn-primary text-white w-100 d-inline my-4">Calculate</button>
-                                <h6 class="mb-3">Player Expenses $5000</h6>
+                                <input type="text" id="inputField" class="bg-transparent border py-1 text-white"><br>
+                                <button class="btn btn-primary text-white w-100 d-inline my-4" id="calculate">Calculate</button>
+                                <h6 class="mb-3" id="playerExpress"></h6>
                                 <label for="" class=" me-2">Maneger</label>
-                                <input type="text" class="bg-transparent border py-1 text-white"><br><br>
+                                <input type="text" id="managerPrice" class="bg-transparent border py-1 text-white"><br><br>
                                 <label for="" class=" me-2">Coach</label>
-                                <input type="text" class="bg-transparent border py-1 text-white"><br>
-                                <button class="btn btn-primary text-white w-100 d-inline my-4">Calculate total</button>
-                                <h6>Total  $5000</h6>
+                                <input type="text" id="coachPrice" class="bg-transparent border py-1 text-white"><br>
+                                <button class="btn btn-primary text-white w-100 d-inline my-4" id="calculateTotal">Calculate total</button>
+                                <h6><span style="margin-right: 180px;">Total price:</span><span id="totalPriceId"></span></h6>
                                 
                             </div>
                         </div>
@@ -170,7 +170,7 @@
 
     </main>
 
-    <footer class="py-5 border-top">
+    <footer style="background: #151515;" class="py-5 border-top">
         <div class="text-center">
             <h6 class="text-white">Copyright @ 2022 All Rights Reserved.</h6>
         </div>

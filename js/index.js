@@ -17,7 +17,7 @@ function displayName(names){
 function selectBtn(xyz){
     const selectName = xyz.parentNode.parentNode.children[0].innerText;
     if(arrayName.length >= 5){
-        alert('Not selected your player')
+        alert('you can not select more 5 player !!')
     }else{
         arrayName.push(selectName);
         xyz.classList.add('disabled');

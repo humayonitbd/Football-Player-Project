@@ -10,7 +10,6 @@ function displayName(names){
         const li = document.createElement('li');
             li.innerText = `${element}`;
             olList.appendChild(li);
-
     }
 }
 
@@ -45,8 +44,17 @@ function totalPlayer(){
 }
 
 document.getElementById('calculate').addEventListener('click', function(){
-    const inputField = totalPlayer();
-    outputText('playerExpress').innerText = `Player Expenses : ${inputField}`;
+    if(inputField.value === ''){
+        alert('please type of number')
+    }
+    else if(arrayName.length <= 0){
+        alert('please select of player !!')
+    }
+    else{
+        const inputField = totalPlayer();
+        outputText('playerExpress').innerText = `Player Expenses : ${inputField}`;
+    }
+    
 })
 
 document.getElementById('calculateTotal').addEventListener('click', function(){
